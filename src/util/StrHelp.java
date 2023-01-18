@@ -33,7 +33,6 @@ public class StrHelp {
                 charsWithIndexesStack.push(new AbstractMap.SimpleEntry<>(i, c));
             }
         }
-
         //Исключение непарных скобок
         List<Integer> exceptIndex = new ArrayList<>();
         if (!validStack.isEmpty()) {
@@ -43,7 +42,7 @@ public class StrHelp {
                     .forEachRemaining(el -> exceptIndex.add(el.getKey()));
         }
 
-        //Сборка итоговой строки валидных пар скобок.
+        // Итоговая строка валидных пар скобок.
         charsWithIndexesStack
                 .elements()
                 .asIterator()
